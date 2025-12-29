@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, ArrowRight, Check, Users, Zap, Shield, Globe } from 'lucide-react';
 
 export default function RadenWebsite() {
@@ -25,7 +25,7 @@ export default function RadenWebsite() {
       icon: <Users className="w-6 h-6" />,
       title: "Easy Collaboration",
       description: "Tools kolaborasi real-time untuk meningkatkan produktivitas tim"
-    } 
+    }
   ];
 
   const plans = [
@@ -60,7 +60,7 @@ export default function RadenWebsite() {
     }
     iconLink.href = '/50 - logo.png';
   }, [])
-  
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 to-violet-950">
       {/* Navigation */}
@@ -89,7 +89,7 @@ export default function RadenWebsite() {
               </button>
             </div>
 
-            <button 
+            <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -172,13 +172,12 @@ export default function RadenWebsite() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {plans.map((plan, idx) => (
-              <div 
-                key={idx} 
-                className={`rounded-xl p-8 transition transform hover:scale-105 border ${
-                  plan.popular 
-                    ? 'bg-gradient-to-br from-violet-600 to-violet-700 text-white shadow-2xl shadow-violet-600/50 border-violet-500' 
+              <div
+                key={idx}
+                className={`rounded-xl p-8 transition transform hover:scale-105 border ${plan.popular
+                    ? 'bg-gradient-to-br from-violet-600 to-violet-700 text-white shadow-2xl shadow-violet-600/50 border-violet-500'
                     : 'bg-slate-900 text-gray-300 shadow-lg border-violet-800 hover:border-violet-600'
-                }`}
+                  }`}
               >
                 {plan.popular && (
                   <div className="mb-4 inline-block px-3 py-1 bg-violet-500 rounded-full text-sm font-semibold">
@@ -193,12 +192,11 @@ export default function RadenWebsite() {
                   {plan.price}
                   {plan.price !== "Custom" && <span className="text-lg">/bulan</span>}
                 </p>
-                <button 
-                  className={`w-full py-3 rounded-lg font-semibold transition mb-8 ${
-                    plan.popular 
-                      ? 'bg-white text-violet-600 hover:bg-violet-50' 
+                <button
+                  className={`w-full py-3 rounded-lg font-semibold transition mb-8 ${plan.popular
+                      ? 'bg-white text-violet-600 hover:bg-violet-50'
                       : 'bg-violet-600 text-white hover:bg-violet-700'
-                  }`}
+                    }`}
                 >
                   Mulai Sekarang
                 </button>
