@@ -1,4 +1,10 @@
+
+assets = { directory = "dist" }
+
+[env.dev]
 name = "dev-company-profile"
 compatibility_date = "2025-12-30"
 
-assets = { directory = "dist" }
+[env.prod]
+name = "prod-company-profile"
+compatibility_date = "2025-12-31"
